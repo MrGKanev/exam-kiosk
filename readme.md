@@ -7,7 +7,7 @@ Exam Kiosk is a simple, secure kiosk application designed for exam environments.
 - Fullscreen kiosk mode
 - Blocks common keyboard shortcuts to prevent exiting
 - Loads a specified URL (currently set to <https://gkanev.com>)
-- Secret exit combination (Ctrl+Alt+Q) for authorized personnel
+- Secret exit combination (Shift+Tab+Caps Lock) for authorized personnel
 
 ## Requirements
 
@@ -44,7 +44,7 @@ python3 app.py
 
 The application will start in fullscreen mode, loading the specified URL.
 
-To exit the application, use the secret key combination: Ctrl+Alt+Q
+To exit the application, use the secret key combination: Shift+Tab+Caps Lock (press all three keys simultaneously)
 
 ## Building Executables
 
@@ -67,10 +67,25 @@ Note: Cross-platform building may not always work perfectly. For best results, b
 To change the URL loaded by the kiosk, modify the following line in `app.py`:
 
 ```python
-self.browser.setUrl(QUrl("https://gkanev.com"))
+self.browser.load(QUrl("https://gkanev.com"))
 ```
 
 Replace `"https://gkanev.com"` with your desired URL.
+
+## Troubleshooting
+
+1. **Exit combination doesn't work**: Ensure you're pressing Shift+Tab+Caps Lock simultaneously. If the issue persists, check if your keyboard is registering all key presses correctly.
+
+2. **Page doesn't load**:
+   - Check your internet connection.
+   - Verify that the URL in the code is correct and accessible.
+   - If using a local file, ensure the path is correct and the file exists.
+
+3. **Application crashes on startup**:
+   - Ensure all dependencies are correctly installed.
+   - Check the console output for any error messages.
+
+If problems persist, please open an issue on the GitHub repository with detailed information about the error and your system configuration.
 
 ## Contributing
 
