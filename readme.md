@@ -11,28 +11,36 @@ Exam Kiosk is a simple, secure kiosk application designed for exam environments.
 
 ## Requirements
 
-- Python 3.6+
-- PyQt5
-- PyQtWebEngine
-- pynput
-- PyInstaller (for creating executables)
+- Python 3.8+ (Python 3.11+ recommended)
+- PyQt5 5.15.11
+- PyQtWebEngine 5.15.7
+- pynput 1.8.1
+- PyInstaller 6.16.0 (for creating executables)
+
+All dependencies are managed via `requirements.txt`
 
 ## Installation
 
 1. Clone the repository:
 
-   ```
+   ```bash
    git clone https://github.com/MrGKanev/exam-kiosk.git
    cd exam-kiosk
    ```
 
-2. Run the installation script:
+2. Run the installation script (Linux/macOS):
 
-   ```
+   ```bash
    bash install.sh
    ```
 
-   This script will install all necessary dependencies, including PyInstaller.
+   Or install dependencies manually:
+
+   ```bash
+   pip3 install -r requirements.txt
+   ```
+
+   The installation script will install all necessary dependencies from requirements.txt.
 
 ## Usage
 
