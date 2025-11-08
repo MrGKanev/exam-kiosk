@@ -1,0 +1,12 @@
+# Exam Kiosk Dependencies
+# Python 3.8+
+
+# GUI Framework
+PyQt5==5.15.11
+PyQtWebEngine==5.15.7
+
+# Input Control
+pynput==1.8.1
+
+# Build Tool
+pyinstaller==6.16.0
